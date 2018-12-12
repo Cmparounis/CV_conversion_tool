@@ -22,10 +22,10 @@ def find_table(wordDoc):
             check = True
             while(check):
                 input1 = input("Is this the work experience table? YES/NO \n")
-                if input1 == 'YES':
+                if input1 == 'YES' or input1 == 'yes' or input1 == 'y' or input1 == 'Y':
                     return table
                     check1 == False
-                elif input1 == 'NO':
+                if input1 == 'NO' or input1 == 'no' or input1 == 'n' or input1 == 'N':
                     check = False
                 else:
                     print("Invalid input")
@@ -95,4 +95,4 @@ def format_text(document, table):
             paragraph.style = 'EBRD_2'
 
 switch_to_EBRD(read_jobs(find_table(wordDoc1)))
-print("Document ready at "+ os.getcwd() + "\\" + docname)
+print("Document ready at "+ os.getcwd() + '\\' + docname)
